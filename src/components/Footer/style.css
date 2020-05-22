@@ -1,0 +1,11 @@
+#footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -80px;
+  font-style: italic;
+  color: rgba(0,0,0,0.5);
+  background-color: rgb(235,235,235);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}

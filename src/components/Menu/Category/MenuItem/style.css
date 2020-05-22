@@ -1,0 +1,19 @@
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem !important;
+}
+.menu-item-label {
+    margin-right: auto;
+}
+.menu-item-button {
+    margin-left: 1rem;
+}
+.menu-item-icon {
+    font-size: 1rem;
+}
+.badge {
+    margin-left: 1rem !important;
+}
