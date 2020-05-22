@@ -12,7 +12,12 @@ A React app for ordering food inside a restaurant.
 Intended for restaurants to display on tablet computers near the physical entrance.  
 Restaurants can login to edit menus and manage orders, or open the customer entry point and stage the tablet for use.
 ## Features
-- Coming soon
+
+_Note: some features are still missing. This is a description of planned functionality._
+- Login to restaurant account to manage menus and active orders
+- Open the customer UI from a restaurant account to prepare for customer orders
+- As a customer: view the restaurant menu, add items to your cart, then checkout with your contact info
+
 
 ## Contributors
 <img align="left" src="https://github.com/mgrinx.png?size=24"><a href="https://github.com/mgrinx">mgrinx</a><br>  
