@@ -8,6 +8,7 @@ A React app for ordering food inside a restaurant.
 - [Contributors](#Contributors)
 - [Dependencies](#Dependencies)
 ## Usage
+### [Try it!](http://shrouded-taiga-01572.herokuapp.com/)
 Intended for restaurants to display on tablet computers near the physical entrance.  
 Restaurants can login to edit menus and manage orders, or open the customer entry point and stage the tablet for use.
 ## Features
