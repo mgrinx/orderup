@@ -14,10 +14,14 @@ Restaurants can login to edit menus and manage orders, or open the customer entr
 ## Features
 
 _Note: some features are still missing. This is a description of planned functionality._  
+&nbsp;  
 As a restaurant:
+
 - Login to restaurant account to manage menus and active orders
 - Open the customer UI from a restaurant account to prepare for customer orders
+
 As a customer:
+
 - View the restaurant menu
 - Add items to your cart
 - Checkout with your contact info
