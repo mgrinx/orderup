@@ -13,11 +13,15 @@ Intended for restaurants to display on tablet computers near the physical entran
 Restaurants can login to edit menus and manage orders, or open the customer entry point and stage the tablet for use.
 ## Features
 
-_Note: some features are still missing. This is a description of planned functionality._
+_Note: some features are still missing. This is a description of planned functionality._  
+As a restaurant:
 - Login to restaurant account to manage menus and active orders
 - Open the customer UI from a restaurant account to prepare for customer orders
-- As a customer: view the restaurant menu, add items to your cart, then checkout with your contact info
-
+As a customer:
+- View the restaurant menu
+- Add items to your cart
+- Checkout with your contact info
+- Receive a text message, email, or have your name called when your order is done
 
 ## Contributors
 <img align="left" src="https://github.com/mgrinx.png?size=24"><a href="https://github.com/mgrinx">mgrinx</a><br>  
