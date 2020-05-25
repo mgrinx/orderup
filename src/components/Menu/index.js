@@ -1,11 +1,10 @@
 import React from "react";
-import Category from "./Category"
 import RestaurantLogo from "./bell_pepper.svg"
 import './style.css'
 
 class Menu extends React.Component {
     render() {
-        let { menu } = this.props
+        let { children } = this.props
         return (
 
             <>
@@ -21,17 +20,7 @@ class Menu extends React.Component {
                     <h6 className="menu-label">Here's what's on the menu:</h6>
                 </div>
                 <ul className="collapsible">
-                    {(()=>{
-
-                        let categories = []
-                        menu.forEach(item=> {
-                            if(!categories.includes(item.category)) categories.push(item.category)
-                        })
-                        return categories.map((v,i)=> { return (
-                            <Category key={v+i} name={v} items={menu.filter(item=>item.category===v)} />
-                        )})
-
-                    })()}
+                        {children}
                 </ul>
             </>
         );

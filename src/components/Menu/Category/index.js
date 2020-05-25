@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import MenuItem from './MenuItem';
 import './style.css'
 import { Row, Col } from '../../Grid';
 
 class Category extends Component {
 
     render() {
-        let { name, items } = this.props
+        let { name, children } = this.props
         return (
             <li>
                 <div className="collapsible-header">
-                    {/* <i className="material-icons">{restaurant_menu}</i> */}
+                    <i className="material-icons">{this.getCategoryIcon(name)}</i>
                     <i className="right-align material-icons">list</i>
                     {name}
                 </div>
@@ -19,15 +18,27 @@ class Category extends Component {
                         <Col className="s2 m1 category-side" />
                         <Col className="s10 m11 category-body">
                             <div className="collection">
-                                {items.map(v=> { return (
-                                    <MenuItem key={v._id} { ...v } />
-                                )})}
+                                {children}
                             </div>
                         </Col>
                     </Row>
                 </div>
             </li>
         );
+    }
+
+    getCategoryIcon(categoryName) {
+        switch(categoryName) {
+            case "Breakfast":
+                return "free_breakfast"
+            case "Drinks":
+                return "local_bar"
+            case "Beverages":
+                return "local_drink"
+            default:
+                return "restaurant_menu"
+        }
+
     }
 }
 
