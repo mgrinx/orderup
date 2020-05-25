@@ -1,6 +1,5 @@
 import React from "react";
 import './style.css'
-// import axios from "axios";
 
 class MenuItem extends React.Component {
     state = {

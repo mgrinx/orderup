@@ -5,7 +5,7 @@ import API from '../utils/API'
 import Category from "../components/Menu/Category";
 import MenuItem from "../components/Menu/Category/MenuItem";
 import OrderCompleteBtn from "../components/OrderCompleteBtn";
-import Spinner from "../components/Spinner";
+// import Spinner from "../components/Spinner";
 import { Redirect } from "react-router-dom";
 
 class MakeOrder extends React.Component {
@@ -41,15 +41,17 @@ class MakeOrder extends React.Component {
     }
 
     render() {
-        let { menu, categories, isLoading, orderDone } = this.state
+        let { menu, categories, orderDone } = this.state
 
         if(orderDone) {
             return <Redirect to="/customer" />
         }
 
-        if(isLoading) {
-            return <Spinner />
-        }
+        // This breaks collapsibles on materialize, and trying to fix it breaks wave effects 🤦‍♀️
+
+        // if(isLoading) {
+        //     return <Spinner />
+        // }
 
         return (
             <Container>
