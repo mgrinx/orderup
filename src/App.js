@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './style.css'
-
+import M from 'materialize-css'
 import Home from './pages/Home';
 import Orders from './pages/Orders'
 import Customer from './pages/Customer';
@@ -9,11 +9,14 @@ import Footer from './components/Footer';
 import MakeOrder from './pages/MakeOrder';
 
 
-function App() {
-  return (
+class App extends React.Component {
+  componentDidMount() {
+    M.AutoInit()
+  }
+
+  render=()=> (
     <Router>
       <>
-        {/* <Navbar /> */}
         <Switch>
 
           <Route exact path ="/orders">

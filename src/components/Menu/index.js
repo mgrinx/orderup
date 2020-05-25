@@ -1,8 +1,14 @@
 import React from "react";
 import RestaurantLogo from "./bell_pepper.svg"
 import './style.css'
+import M from 'materialize-css'
 
 class Menu extends React.Component {
+    componentDidMount() {
+        let collapsible = document.querySelector(".collapsible")
+        M.Collapsible.init(collapsible)
+    }
+
     render() {
         let { children } = this.props
         return (

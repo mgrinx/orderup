@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Container, Row, Col } from "../components/Grid";
 import Menu from "../components/Menu";
 import API from '../utils/API'
@@ -41,33 +41,35 @@ class MakeOrder extends React.Component {
     }
 
     render() {
-        let { menu, categories, orderDone } = this.state
+        let { menu, categories, isLoading, orderDone } = this.state
 
         if(orderDone) {
             return <Redirect to="/customer" />
         }
 
+        if(isLoading) {
+            return <Spinner />
+        }
+
         return (
-            <Suspense fallback={<Spinner />}>
-                <Container>
-                    <Row>
-                        <Col className="s12">
-                            <OrderCompleteBtn placeOrder={this.placeOrder}/>
-                            <Menu>
-                                {categories.map((name, categoryIndex) => (
-                                    <Category key={categoryIndex} name={name}>
-                                        {menu.map((item, itemIndex) => (
-                                            item.category===name?
-                                            <MenuItem key={itemIndex} changeQuantity={this.changeQuantity} { ...item } />
-                                            :null
-                                        ))}
-                                    </Category>
-                                ))}
-                            </Menu>
-                        </Col>
-                    </Row>
-                </Container>
-            </Suspense>
+            <Container>
+                <Row>
+                    <Col className="s12">
+                        <OrderCompleteBtn placeOrder={this.placeOrder}/>
+                        <Menu>
+                            {categories.map((name, categoryIndex) => (
+                                <Category key={categoryIndex} name={name}>
+                                    {menu.map((item, itemIndex) => (
+                                        item.category===name?
+                                        <MenuItem key={itemIndex} changeQuantity={this.changeQuantity} { ...item } />
+                                        :null
+                                    ))}
+                                </Category>
+                            ))}
+                        </Menu>
+                    </Col>
+                </Row>
+            </Container>
         );
     };
 
@@ -79,7 +81,7 @@ class MakeOrder extends React.Component {
                     return prevState
                 }
             }
-            console.log("Didn't find item, adding...")
+            // console.log("Didn't find item, adding...")
             return prevState.orderItems.push({
                 id: itemId,
                 quantity: q
