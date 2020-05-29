@@ -15,7 +15,7 @@ class OrderList extends React.Component {
         res = await API.get("/orders")
         let data = res.data.filter(v=>v.restaurantId===restaurant)
         this.setState({ orders: data })
-        console.log(this.state)
+        // console.log(this.state)
     }
 
     render() {

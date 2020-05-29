@@ -1,0 +1,7 @@
+.done {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -120px;
+    margin-top: -50px;
+}

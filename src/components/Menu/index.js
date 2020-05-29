@@ -1,9 +1,12 @@
 import React from "react";
 import RestaurantLogo from "./bell_pepper.svg"
 import './style.css'
+import M from 'materialize-css'
 
 class Menu extends React.Component {
-
+    componentDidMount() {
+        M.Collapsible.init(this.Collapsible1);
+    }
 
     render() {
         let { children } = this.props
@@ -21,7 +24,7 @@ class Menu extends React.Component {
                     <div className="divider"></div>
                     <h6 className="menu-label">Here's what's on the menu:</h6>
                 </div>
-                <ul className="collapsible">
+                <ul ref={Collapsible => { this.Collapsible1 = Collapsible }} className="collapsible">
                         {children}
                 </ul>
             </>

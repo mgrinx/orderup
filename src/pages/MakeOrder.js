@@ -44,10 +44,9 @@ class MakeOrder extends React.Component {
         let { menu, categories, orderDone } = this.state
 
         if(orderDone) {
-            return <Redirect to="/customer" />
+            return <Redirect to="/done" />
         }
 
-        // This breaks collapsibles on materialize, and trying to fix it breaks wave effects 🤦‍♀️
 
         // if(isLoading) {
         //     return <Spinner />
@@ -93,11 +92,12 @@ class MakeOrder extends React.Component {
 
     placeOrder =async()=> {
         let { restaurant, orderItems } = this.state
+        let { name, phone } = this.props.location.state
         //make the order
         let res = await API.post("/orders", {
             restaurantId: restaurant._id,
-            name: "Default User",
-            phone: "5555555555"
+            name: name,
+            phone: phone
         })
         let order = res.data
         //TODO: let the user enter this data
