@@ -33,5 +33,4 @@ As a customer:
 &nbsp;  
 
 ![react](https://img.shields.io/badge/dynamic/json?color=blue&label=react&query=%24.dependencies.react&url=https%3A%2F%2Fraw.githubusercontent.com%2Fmgrinx%2Forderup%2Fmaster%2Fpackage.json)
-
-![materialize-css](https://img.shields.io/badge/dynamic/json?color=blue&label=materialize-css&query=%24.dependencies.materialize-css&url=https%3A%2F%2Fraw.githubusercontent.com%2Fmgrinx%2Forderup%2Fmaster%2Fpackage.json)
+![materialize-css](https://img.shields.io/badge/dynamic/json?color=blue&label=materialize-css&query=%24.dependencies%5B%22materialize-css%22%5D&url=https%3A%2F%2Fraw.githubusercontent.com%2Fmgrinx%2Forderup%2Fmaster%2Fpackage.json)
